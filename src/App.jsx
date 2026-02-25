@@ -1,13 +1,18 @@
+import React from "react";
+import TaskForm from "./Components/TaskForm.jsx";
+import Tasklist from "./Components/Tasklist";
+import ProgressTracker from "./Components/ProgressTracker";
 
-import './App.css'
-
-function App() {
+export default function App() {
   return (
     <div>
-      <nav>your task to be done</nav>
+      <header>
+        <h1>Task Manager</h1>
+        <p>your friendly task Manager</p>
+      </header>
+      <TaskForm />
+      <Tasklist />
+      <ProgressTracker />
     </div>
-
   )
 }
-
-export default App
