@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import TaskForm from "./Components/TaskForm.jsx";
-import Tasklist from "./Components/Tasklist";
+import Tasklist from "./Components/TaskList";
 import ProgressTracker from "./Components/ProgressTracker";
 import { useState } from "react"
 
@@ -12,8 +12,13 @@ export default function App() {
   });
   const addTask = (task) => {
     setTasks(task)
-
   }
+  const updatedTask = (updatedTask, index) => {
+    const newtask = [...task];
+    newtask[index] = updatedTask;
+    setTasks(newtask);
+  }
+  const deleteTask = () => { }
   return (
     <div>
       <header>
@@ -21,7 +26,9 @@ export default function App() {
         <p>your friendly task Manager</p>
       </header>
       <TaskForm addTask={addTask} />
-      <Tasklist />
+      <Tasklist tasks={tasks}
+        updatedTask={updatedTask}
+        deleteTask={deleteTask} />
       <ProgressTracker />
     </div>
   )
