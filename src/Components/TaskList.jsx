@@ -1,17 +1,22 @@
 import React from "react";
-export default function Tasklist(tasks, updateTask, deleteTask) {
+export default function TaskList({ tasks, updateTask, deleteTask }) {
+    const toggleComplete = (index) => {
+        const updatedTask = { ...tasks[index], completed: !tasks[index].completed };
+        updateTask(updatedTask, index);
+    }
     return (
         <ul className="task-list">{
-            task.map(({ task, index }) => (
-                <li>
+            tasks.map((task, index) => (
+                <li key={index}>
                     <div>
                         <span>{task.text}</span>
                         <small>{task.category}, {task.priority}</small>
                     </div>
                     <div>
-                        <button onClick={() => toggleCompletes(index)}
-                        >{task.completed ? "undo" : "complete"}</button>
-                        <button>Delete</button>
+                        <button onClick={() => toggleComplete(index)}>
+                            {task.completed ? "undo" : "complete"}
+                        </button>
+                        <button onClick={() => deleteTask(index)}>Delete</button>
                     </div>
                 </li>
             ))

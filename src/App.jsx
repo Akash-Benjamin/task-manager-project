@@ -11,10 +11,10 @@ export default function App() {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   });
   const addTask = (task) => {
-    setTasks(task)
+    setTasks([...tasks, task])
   }
-  const updatedTask = (updatedTask, index) => {
-    const newtask = [...task];
+  const updateTask = (updatedTask, index) => {
+    const newtask = [...tasks];
     newtask[index] = updatedTask;
     setTasks(newtask);
   }
@@ -27,7 +27,7 @@ export default function App() {
       </header>
       <TaskForm addTask={addTask} />
       <Tasklist tasks={tasks}
-        updatedTask={updatedTask}
+        updateTask={updateTask}
         deleteTask={deleteTask} />
       <ProgressTracker />
     </div>
