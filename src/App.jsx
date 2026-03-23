@@ -18,7 +18,9 @@ export default function App() {
     newtask[index] = updatedTask;
     setTasks(newtask);
   }
-  const deleteTask = () => { }
+  const deleteTask = (index) => {
+    setTasks(tasks.filter((_, i) => i != index))
+  }
   return (
     <div>
       <header>
@@ -29,7 +31,7 @@ export default function App() {
       <Tasklist tasks={tasks}
         updateTask={updateTask}
         deleteTask={deleteTask} />
-      <ProgressTracker />
+      <ProgressTracker tasks={tasks} />
     </div>
   )
 }
