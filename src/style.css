@@ -113,7 +113,8 @@
 /* Input container */
 #inp {
     margin-top: 20px;
-    width: 50%;
+    flex: 1;
+    min-width: 250px;
     display: flex;
     align-items: center;
     background-color: #1f2937;
@@ -136,7 +137,11 @@
     border: none;
     outline: none;
     font-size: 1rem;
-    placeholder-color: #6b7280;
+}
+
+/* Placeholder text color */
+#inp input::placeholder {
+    color: #6b7280;
     /* Matches Tailwind's placeholder-gray-500 */
 }
 
@@ -245,14 +250,27 @@ header p {
     /* italic */
 }
 
+body {
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
 .App {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
     background-color: black;
-    /* Deep navy for a modern look */
     color: #e4e4e4;
-    /* Light gray for text contrast */
+    box-sizing: border-box;
 }
 
 h1 {
@@ -276,8 +294,10 @@ h1 {
 
 .task-form {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 10px;
+    align-items: center;
+    gap: 15px;
     margin-bottom: 20px;
 }
 

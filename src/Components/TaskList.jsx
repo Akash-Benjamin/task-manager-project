@@ -8,9 +8,9 @@ export default function TaskList({ tasks, updateTask, deleteTask }) {
         <ul className="task-list">{
             tasks.map((task, index) => (
                 <li key={index}>
-                    <div>
-                        <span>{task.text}</span>
-                        <small>{task.category}, {task.priority}</small>
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "4px" }}>
+                        <span className="task-text" style={{ fontWeight: "bold", fontSize: "1.1rem" }}>{task.text}</span>
+                        <small className="task-timestamp" style={{ opacity: 0.8 }}>{task.category} • {task.priority}</small>
                     </div>
                     <div>
                         <button onClick={() => toggleComplete(index)}>
