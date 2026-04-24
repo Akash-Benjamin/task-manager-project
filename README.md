@@ -1,16 +1,69 @@
-# React + Vite
+# 🚀 Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Task Manager is a powerful task management app built using ReactJS. It helps users manage daily tasks with ease — add, update, delete, track progress, and clear all tasks with just one click!
+---
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ➕ Add Tasks: Users can add new tasks to the list.
+- ✏️ Update Tasks: Users can edit the details of existing tasks.
+- 🗑️ Delete Tasks: Users can remove tasks from the list.
+- 🧹 Clear All Tasks: Users can clear all tasks with a single click.
+- 📊 Progress Tracker: Visual representation of task completion status.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Usage
 
-## Expanding the ESLint configuration
+### ➕ Adding Tasks
+Enter task details and click **"Add Task"**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✏️ Updating Tasks
+Click on a task to edit its details.
+
+### 🗑️ Deleting Tasks
+Click the trash icon next to a task.
+
+### 🧹 Clearing All Tasks
+Click the **"Clear All Tasks"** button.
+
+### 📊 Progress Tracker
+View your task completion progress visually.
+
+---
+
+## 🧑‍💻 Tech Stack
+
+- ReactJS
+- JavaScript
+- HTML
+- CSS
+
+---
+
+## 📌 Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Akash-Benjamin/task-manager-project.git?
+   ```
+
+2. Navigate into the project:
+   ```bash
+   cd Front-End
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+4. Start the app:
+   ```bash
+   npm start
+   ```
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
